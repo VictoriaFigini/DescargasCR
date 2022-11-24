@@ -10,7 +10,7 @@ from datetime import date
 import pandas as pd
 
 def get_pagos(fecha_desde, fecha_hasta, destino):
-    codigos = ['1115 - a0601115 - Naranja10', '1128 - a0601128 - Naranja23',  '179 - a0600179 - neabajo1instancia179',  '243 - a0600243 - rosario1instancia243',  '549 - a0600549 - Cordoba1instancia549',  '866 - a0600866 - neuquen1instancia866',  '997 - a0600997 - riogrande1instancia997',  '149 - a0600149 - patagonia2instancia149',  '170 - a0600170 - ushuaia2instancia170',  '173 - a0600173 - litoral2instancia173',  '875 - a0600875 - ushuaia3instancia875',  '879 - a0600879 - lapampa3instancia879',  '939 - a0600939 - patagonia3instancia939',  '998 - a0600998 - patagonia3instancia998',  '368 - a0600368 - neuquen1instancia368',  '388 - a0600388 - santarosa1instancia388',  '886 - a0600886 - Naranja10']
+    codigos = ['']
     fecha_desde = str(fecha_desde)
     fecha_hasta = str(fecha_hasta)
     #Opciones de navegación
@@ -24,7 +24,7 @@ def get_pagos(fecha_desde, fecha_hasta, destino):
                 "savefile.default_directory": "C:\\"}
     options.add_experimental_option("prefs", profile)
 
-    driver_path = '\\\\DC2.internal.gesinco.com.ar\\sistemas\\Procesadores - Vicky\\Descargador TN\\chromedriver.exe'
+    driver_path = '\\\\C:\\sistemas\\Procesadores - Vicky\\Descargador TN\\chromedriver.exe'
 
     driver = webdriver.Chrome(driver_path, options=options)
 
@@ -34,7 +34,7 @@ def get_pagos(fecha_desde, fecha_hasta, destino):
     time.sleep(1)
 
     #Inicializamos el navegador
-    driver.get('https://abogados.naranja.com/login_abogados.asp')
+    driver.get('https://')
 
     for codigo in codigos:
         codigo = codigo.split(' - ')
